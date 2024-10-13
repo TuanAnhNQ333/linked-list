@@ -40,12 +40,12 @@ void addLast(struct Node ** head, int k)
     while(temp -> next != NULL)
     {
         if(temp -> data == k)
-            return;
+           { return;}
         temp = temp -> next;
     }
     // kiem tra phan tu cuoi cung cua danh sach
     if(temp -> data == k)
-        return ;
+        {return ;}
     temp -> next = createNode(k);
 
 }
@@ -169,6 +169,7 @@ void printList(struct Node * head)
         printf("%d ", temp -> data);
         temp = temp -> next;
     }
+    printf("\n");
 }
 int main()
 {
@@ -184,6 +185,7 @@ int main()
     while(1)
     {
         scanf("%s", command);
+
     if(command[0] == '#') 
     {
         break;
